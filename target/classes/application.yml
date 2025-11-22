@@ -1,4 +1,6 @@
 spring:
+  cache:
+    type: simple
   datasource:
     url: jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl
     username: ${DB_USER:rm556795}
@@ -19,7 +21,7 @@ spring:
     password: ${RABBIT_PASS:guest}
     listener:
       simple:
-        auto-startup: true
+        auto-startup: false
 
   security:
     oauth2:
