@@ -81,10 +81,16 @@ public class CheckInService {
     public CheckInResponseDTO toResponseDTO(CheckIn ck) {
         CheckInResponseDTO dto = new CheckInResponseDTO();
         dto.setId(ck.getId());
+        dto.setUserId(ck.getUser().getId());
         dto.setMood(ck.getMood());
         dto.setEnergyLevel(ck.getEnergyLevel());
         dto.setNotes(ck.getNotes());
-        dto.setCreatedAt(Instant.from(ck.getCreatedAt()));
+        dto.setCreatedAt(ck.getCreatedAt());
+        if (ck.getGeneratedMessage() != null) {
+            dto.setGeneratedMessage(ck.getGeneratedMessage().getMessage());
+        } else {
+            dto.setGeneratedMessage(null);
+        }
         return dto;
     }
 

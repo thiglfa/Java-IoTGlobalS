@@ -1,5 +1,6 @@
 package com.wellwork.service;
 
+import com.wellwork.dto.GeneratedMessageResponseDTO;
 import com.wellwork.model.entities.CheckIn;
 import com.wellwork.model.entities.GeneratedMessage;
 import com.wellwork.repository.GeneratedMessageRepository;
@@ -29,7 +30,7 @@ public class GeneratedMessageService {
      * Retorna a entidade persistida.
      */
     @Transactional
-    public GeneratedMessage generateForCheckIn(Long checkInId) {
+    public GeneratedMessageResponseDTO generateForCheckIn(Long checkInId) {
         CheckIn checkIn = checkInRepository.findById(checkInId)
                 .orElseThrow(() -> new IllegalArgumentException("CheckIn não encontrado: " + checkInId));
 
@@ -46,16 +47,27 @@ public class GeneratedMessageService {
 
         GeneratedMessage saved = generatedMessageRepository.save(gm);
 
-        // associação bidirecional
+        // Associação bidirecional
         checkIn.setGeneratedMessage(saved);
         checkInRepository.save(checkIn);
 
-        return saved;
+        // 🔥 converte entidade → DTO
+        return toResponseDTO(saved);
     }
 
     private String buildPrompt(CheckIn checkIn) {
         String notes = checkIn.getNotes() == null ? "" : checkIn.getNotes();
         return String.format("Você é um assistente de bem-estar. O usuário reportou humor: %s, nível de energia: %s. Notas: %s. Gere uma recomendação curta (1-2 frases) e informe a confiança da recomendação (0-1) se possível.",
                 checkIn.getMood(), checkIn.getEnergyLevel(), notes);
+    }
+
+    private GeneratedMessageResponseDTO toResponseDTO(GeneratedMessage gm) {
+        GeneratedMessageResponseDTO dto = new GeneratedMessageResponseDTO();
+        dto.setId(gm.getId());
+        dto.setCheckInId(gm.getCheckIn().getId());
+        dto.setMessage(gm.getMessage());
+        dto.setConfidence(gm.getConfidence());
+        dto.setGeneratedAt(gm.getGeneratedAt());
+        return dto;
     }
 }

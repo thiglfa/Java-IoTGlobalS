@@ -6,8 +6,11 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @Entity
 @Table(name = "checkins")
@@ -39,9 +42,10 @@ public class CheckIn {
     @Getter @Setter
     private String notes;
 
+    @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
     @Getter @Setter
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private OffsetDateTime createdAt;
 
     @OneToOne(mappedBy = "checkIn", cascade = CascadeType.ALL, orphanRemoval = true)
     @Getter @Setter
@@ -50,7 +54,7 @@ public class CheckIn {
     public CheckIn() {}
 
     public CheckIn(Long id, User user, Mood mood, EnergyLevel energyLevel, String notes,
-                   LocalDateTime createdAt, GeneratedMessage generatedMessage) {
+                   OffsetDateTime createdAt, GeneratedMessage generatedMessage) {
         this.id = id;
         this.user = user;
         this.mood = mood;

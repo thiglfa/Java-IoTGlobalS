@@ -5,6 +5,7 @@ import com.wellwork.model.enums.Mood;
 import lombok.Data;
 
 import java.time.Instant;
+import java.time.OffsetDateTime;
 
 @Data
 public class CheckInResponseDTO {
@@ -14,5 +15,6 @@ public class CheckInResponseDTO {
     private Mood mood;
     private EnergyLevel energyLevel;
     private String notes;
-    private Instant createdAt;
+    private OffsetDateTime createdAt;
+    private String generatedMessage;
 }

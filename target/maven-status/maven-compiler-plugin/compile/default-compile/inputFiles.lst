@@ -1,29 +1,31 @@
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\config\AiConfig.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\config\CacheConfig.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\config\SecurityConfig.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\controller\AuthController.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\controller\CheckInController.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\controller\UserController.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\dto\CheckInCreateDTO.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\dto\CheckInRequestDTO.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\dto\CheckInResponseDTO.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\dto\GeneratedMessageRequestDTO.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\dto\GeneratedMessageResponseDTO.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\dto\UserLoginDTO.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\dto\UserRequestDTO.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\dto\UserResponseDTO.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\model\entities\CheckIn.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\model\entities\GeneratedMessage.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\model\entities\User.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\model\enums\EnergyLevel.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\model\enums\Mood.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\repository\CheckInRepository.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\repository\GeneratedMessageRepository.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\repository\UserRepository.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\security\JwtUtil.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\service\AIService.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\service\AuthService.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\service\CheckInService.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\service\GeneratedMessageService.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\service\UserService.java
-C:\Users\thiag\Desktop\WellWork\src\main\java\com\wellwork\WellWorkApplication.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\config\AiConfig.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\config\CacheConfig.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\config\SecurityConfig.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\controller\AuthController.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\controller\CheckInController.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\controller\UserController.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\dto\CheckInCreateDTO.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\dto\CheckInRequestDTO.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\dto\CheckInResponseDTO.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\dto\GeneratedMessageRequestDTO.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\dto\GeneratedMessageResponseDTO.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\dto\LoginRequest.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\dto\LoginResponse.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\dto\UserLoginDTO.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\dto\UserRequestDTO.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\dto\UserResponseDTO.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\model\entities\CheckIn.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\model\entities\GeneratedMessage.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\model\entities\User.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\model\enums\EnergyLevel.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\model\enums\Mood.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\repository\CheckInRepository.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\repository\GeneratedMessageRepository.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\repository\UserRepository.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\security\JwtUtil.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\service\AIService.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\service\AuthService.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\service\CheckInService.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\service\GeneratedMessageService.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\service\UserService.java
+C:\Users\Home\OneDrive\Área de Trabalho\GS\java\src\main\java\com\wellwork\WellWorkApplication.java

@@ -26,7 +26,7 @@ spring:
 
 groq:
   api:
-    key: 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
+    key: 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
   model: llama-3.1-8b-instant
   temperature: 0.2
 

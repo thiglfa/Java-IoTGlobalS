@@ -7,6 +7,7 @@ com\wellwork\dto\CheckInResponseDTO.class
 com\wellwork\WellWorkApplication.class
 com\wellwork\service\CheckInService.class
 com\wellwork\model\entities\User.class
+com\wellwork\dto\LoginRequest.class
 com\wellwork\dto\UserResponseDTO.class
 com\wellwork\model\entities\CheckIn.class
 com\wellwork\model\enums\EnergyLevel.class
@@ -19,6 +20,7 @@ com\wellwork\dto\GeneratedMessageResponseDTO.class
 com\wellwork\config\SecurityConfig$JwtAuthFilter.class
 com\wellwork\controller\AuthController$LoginResponse.class
 com\wellwork\service\GeneratedMessageService.class
+com\wellwork\dto\LoginResponse.class
 com\wellwork\repository\CheckInRepository.class
 com\wellwork\dto\UserLoginDTO.class
 com\wellwork\model\entities\GeneratedMessage.class

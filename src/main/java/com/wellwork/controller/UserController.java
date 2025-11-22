@@ -31,7 +31,7 @@ public class UserController {
     }
 
     // list users (admin use-case) - paginated
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<Page<UserResponseDTO>> list(Pageable pageable) {
         Page<UserResponseDTO> p = userService.list(pageable);
         return ResponseEntity.ok(p);
