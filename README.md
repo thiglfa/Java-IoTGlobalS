@@ -2,6 +2,7 @@
 
 **WellWork** é uma aplicação Spring Boot que oferece um sistema de check-ins de bem-estar, permitindo que usuários registrem seu humor, nível de energia e notas diárias. A aplicação integra inteligência artificial para gerar mensagens de recomendação personalizadas com base nos check-ins e utiliza mensageria (RabbitMQ) para envio assíncrono de mensagens de boas-vindas.
 
+INTEGRANTES:
 
 - Eduardo do Nascimento Barriviera - RM 555309
 - Thiago Lima de Freitas - RM 556795
