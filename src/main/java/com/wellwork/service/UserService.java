@@ -57,7 +57,9 @@ public class UserService {
                         "user.welcome",
                         "Bem-vindo(a), " + u.getUsername() + "!"
                 );
-            } catch (AmqpException ignored) {}
+            } catch (AmqpException ignored) {
+                System.out.println("⚠️ RabbitMQ indisponível. Ignorando.");
+            }
         }
 
         return toResponse(u);

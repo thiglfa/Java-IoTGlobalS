@@ -1,5 +1,7 @@
+
 package com.wellwork.controller;
 
+import com.wellwork.dto.PasswordUpdateDTO;
 import com.wellwork.dto.UserRequestDTO;
 import com.wellwork.dto.UserResponseDTO;
 import com.wellwork.service.UserService;
@@ -48,9 +50,10 @@ public class UserController {
 
     @PutMapping("/{id}/password")
     public ResponseEntity<Void> updatePassword(
-            @PathVariable("id") Long id,
-            @Valid @RequestBody String newPassword) {
-        userService.updatePassword(id, newPassword);
+            @PathVariable Long id,
+            @RequestBody PasswordUpdateDTO body
+    ) {
+        userService.updatePassword(id, body.password());
         return ResponseEntity.noContent().build();
     }
 

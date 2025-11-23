@@ -33,4 +33,5 @@ com\wellwork\service\AIService.class
 com\wellwork\config\CacheConfig.class
 com\wellwork\service\AIService$Result.class
 com\wellwork\config\SecurityConfig.class
+com\wellwork\dto\PasswordUpdateDTO.class
 com\wellwork\repository\UserRepository.class
