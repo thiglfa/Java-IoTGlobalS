@@ -6,7 +6,9 @@ import com.wellwork.service.UserService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,10 +26,11 @@ public class UserController {
 
     // get current authenticated user's profile
     @GetMapping("/me")
-    public ResponseEntity<UserResponseDTO> me(@AuthenticationPrincipal Jwt jwt) {
-        String username = jwt.getSubject();
-        UserResponseDTO dto = userService.findByUsernameResponse(username);
-        return ResponseEntity.ok(dto);
+    public UserResponseDTO me() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName(); // ← isto sempre funciona no seu sistema
+
+        return userService.findByUsernameResponse(username);
     }
 
     // list users (admin use-case) - paginated
@@ -38,14 +41,15 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserResponseDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<UserResponseDTO> getById(@PathVariable("id") Long id) {
         UserResponseDTO dto = userService.getById(id);
         return ResponseEntity.ok(dto);
     }
 
     @PutMapping("/{id}/password")
-    public ResponseEntity<Void> updatePassword(@PathVariable Long id,
-                                               @Valid @RequestBody(required = true) String newPassword) {
+    public ResponseEntity<Void> updatePassword(
+            @PathVariable("id") Long id,
+            @Valid @RequestBody String newPassword) {
         userService.updatePassword(id, newPassword);
         return ResponseEntity.noContent().build();
     }

@@ -5,12 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63c2126e-16d6-4dba-bc9f-8a154758ac1f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wellwork/WellWorkApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wellwork/WellWorkApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wellwork/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wellwork/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wellwork/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wellwork/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wellwork/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wellwork/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/WellWorkApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/WellWorkApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/config/SecurityConfig$JwtAuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/config/SecurityConfig$JwtAuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/controller/AuthController$LoginResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/controller/AuthController$LoginResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/controller/CheckInController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/controller/CheckInController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/dto/CheckInCreateDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/dto/CheckInCreateDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/dto/CheckInRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/dto/CheckInRequestDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/dto/CheckInResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/dto/CheckInResponseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/dto/GeneratedMessageRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/dto/GeneratedMessageRequestDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/dto/GeneratedMessageResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/dto/GeneratedMessageResponseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/dto/UserLoginDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/dto/UserLoginDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/dto/UserRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/dto/UserRequestDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/dto/UserResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/dto/UserResponseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/listener/WelcomeListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/listener/WelcomeListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/messaging/WelcomeMessageConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/messaging/WelcomeMessageConsumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/messaging/WelcomeMessageProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/messaging/WelcomeMessageProducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/model/entities/CheckIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/model/entities/CheckIn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/model/entities/GeneratedMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/model/entities/GeneratedMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/model/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/model/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/model/enums/EnergyLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/model/enums/EnergyLevel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/model/enums/Mood.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/model/enums/Mood.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/repository/CheckInRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/repository/CheckInRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/repository/GeneratedMessageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/repository/GeneratedMessageRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/security/JwtUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/security/JwtUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/service/AIService$Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/service/AIService$Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/service/AIService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/service/AIService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/service/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/service/CheckInService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/service/CheckInService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/service/GeneratedMessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/service/GeneratedMessageService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wellwork/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wellwork/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/wellwork-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/wellwork-0.0.1-SNAPSHOT.jar" afterDir="false" />
     </list>
@@ -41,6 +73,8 @@
   "keyToString": {
     "Application.WellWorkApplication.executor": "Run",
     "Maven.wellwork [clean,install].executor": "Run",
+    "Maven.wellwork [clean].executor": "Run",
+    "Maven.wellwork [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
@@ -51,6 +85,8 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean install" />
+      <command value="mvn clean" />
+      <command value="mvn install" />
     </option>
   </component>
   <component name="RunManager">

@@ -10,6 +10,8 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,12 +30,12 @@ public class UserService {
     ) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
-        this.rabbitTemplate = rabbitTemplate; // opcional
+        this.rabbitTemplate = rabbitTemplate;
     }
 
-    // ============================================
+    // ======================
     // CREATE USER
-    // ============================================
+    // ======================
     @Transactional
     @CacheEvict(value = "users", allEntries = true)
     public UserResponseDTO create(UserRequestDTO dto) {
@@ -47,7 +49,7 @@ public class UserService {
         u.setPassword(passwordEncoder.encode(dto.getPassword()));
         userRepository.save(u);
 
-        // ENVIO OPCIONAL PARA RABBITMQ
+        // RabbitMQ
         if (rabbitTemplate != null) {
             try {
                 rabbitTemplate.convertAndSend(
@@ -55,54 +57,69 @@ public class UserService {
                         "user.welcome",
                         "Bem-vindo(a), " + u.getUsername() + "!"
                 );
-            } catch (AmqpException ignored) {
-                System.out.println("⚠️ RabbitMQ indisponível. Ignorando.");
-            }
+            } catch (AmqpException ignored) {}
         }
 
         return toResponse(u);
     }
 
-    // ============================================
-    // GET BY ID (CACHEABLE)
-    // ============================================
+    // ======================
+    // GET USER BY ID - liberado para QUALQUER autenticado
+    // ======================
     @Cacheable(value = "users", key = "#id")
     public UserResponseDTO getById(Long id) {
+
+        // Apenas garante que o usuário está autenticado
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (auth == null || !auth.isAuthenticated()) {
+            throw new SecurityException("Acesso negado. Token inválido.");
+        }
+
         User u = userRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("User não encontrado: " + id));
 
         return toResponse(u);
     }
 
-    // ============================================
-    // LIST USERS (REQUIRED BY UserController)
-    // ============================================
+    // ======================
+    // LIST USERS
+    // ======================
     public Page<UserResponseDTO> list(Pageable pageable) {
         return userRepository.findAll(pageable).map(this::toResponse);
     }
 
-    // ============================================
-    // FIND USER ENTITY BY USERNAME (NEEDED BY CheckInController)
-    // ============================================
+    // ======================
+    // findEntityByUsername
+    // ======================
     public User findEntityByUsername(String username) {
         return userRepository.findByUsername(username)
                 .orElseThrow(() -> new IllegalArgumentException("User não encontrado: " + username));
     }
 
-    // ============================================
-    // GET BY USERNAME (CACHEABLE)
-    // ============================================
+    // ======================
+    // /me endpoint
+    // ======================
     @Cacheable(value = "users", key = "#username")
     public UserResponseDTO findByUsernameResponse(String username) {
         return toResponse(findEntityByUsername(username));
     }
 
-    // ============================================
-    // UPDATE PASSWORD
-    // ============================================
+    // ======================
+    // update password - RESTRITO ao próprio usuário
+    // ======================
     @Transactional
     @CacheEvict(value = "users", allEntries = true)
     public void updatePassword(Long userId, String newPassword) {
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String loggedUser = auth.getName();
+
+        User me = findEntityByUsername(loggedUser);
+
+        if (!me.getId().equals(userId)) {
+            throw new SecurityException("Você não pode alterar a senha de outro usuário.");
+        }
+
         User u = userRepository.findById(userId)
                 .orElseThrow(() -> new IllegalArgumentException("User não encontrado: " + userId));
 
@@ -110,18 +127,28 @@ public class UserService {
         userRepository.save(u);
     }
 
-    // ============================================
-    // DELETE USER
-    // ============================================
+    // ======================
+    // delete - RESTRITO ao próprio usuário
+    // ======================
     @Transactional
     @CacheEvict(value = "users", allEntries = true)
     public void delete(Long id) {
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String loggedUser = auth.getName();
+
+        User me = findEntityByUsername(loggedUser);
+
+        if (!me.getId().equals(id)) {
+            throw new SecurityException("Você não pode excluir outro usuário.");
+        }
+
         userRepository.deleteById(id);
     }
 
-    // ============================================
-    // CONVERTER
-    // ============================================
+    // ======================
+    // converter
+    // ======================
     private UserResponseDTO toResponse(User u) {
         UserResponseDTO r = new UserResponseDTO();
         r.setId(u.getId());

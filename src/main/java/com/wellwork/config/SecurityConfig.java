@@ -38,8 +38,8 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/**").permitAll() // libera registro/login
-                        .anyRequest().authenticated()            // outros endpoints precisam de JWT
+                        .requestMatchers("/auth/**").permitAll() // registra/login livres
+                        .anyRequest().authenticated()            // qualquer outra rota precisa de token
                 )
                 .addFilterBefore(new JwtAuthFilter(jwtUtil), UsernamePasswordAuthenticationFilter.class);
 
@@ -51,7 +51,7 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    // Filtro de autenticação JWT
+    // Filtro JWT
     public static class JwtAuthFilter extends OncePerRequestFilter {
 
         private final JwtUtil jwtUtil;
