@@ -49,8 +49,6 @@ INTEGRANTES:
 
 ### Autenticação
 
-Metódos POST, PUT e PATCH requerem um body em formato JSON:
-
 | Método | Endpoint | Descrição |-
 |--------|----------|-----------|-
 | POST | `/auth/register` | Cria um novo usuário |
