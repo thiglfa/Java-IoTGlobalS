@@ -141,11 +141,11 @@ groq:
 
 ## Como Rodar o Projeto
 
-1. Clonar o repositório:
+1. Clonar o repositório: https://github.com/thiglfa/Java-IoTGlobalS
 
 ```bash
-git clone https://github.com/thiglfa/JavaGlobalS.git
-cd JavaGlobalS
+git clone https://github.com/thiglfa/Java-IoTGlobalS.git
+cd Java-IoTGlobalS
 ```
 
 2. Configurar variáveis de ambiente:
