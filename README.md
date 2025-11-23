@@ -51,8 +51,8 @@ INTEGRANTES:
 
 Metódos POST, PUT e PATCH requerem um body em formato JSON:
 
-| Método | Endpoint | Descrição | Body JSON |
-|--------|----------|-----------|-----------|
+| Método | Endpoint | Descrição |-
+|--------|----------|-----------|-
 | POST | `/auth/register` | Cria um novo usuário |
 | POST | `/auth/login` | Autentica o usuário e retorna token JWT |
 
@@ -84,6 +84,7 @@ Metódos POST, PUT e PATCH requerem um body em formato JSON:
 | POST | `/api/checkins` | Cria um novo check-in | `{ "mood": "0", "energyLevel": "0", "notes": "Hoje estou me sentindo ótimo!" }` |
 | PATCH | `/api/checkins/{id}` | Atualiza parcialmente um check-in | `{ "mood": "1", "energyLevel": "1", "notes": "Notas atualizadas" }` |
 | POST | `/api/checkins/{id}/generate-message` | Gera mensagem de bem-estar via IA para o check-in | `{ "checkInId": 123 }` (opcional, pois o ID já está na URL) |
+
 
 
 Moods (de 0 a 3): HAPPY, NEUTRAL, SAD, STRESSED.
