@@ -55,6 +55,7 @@ Metódos POST, PUT e PATCH requerem um body em formato JSON:
 |--------|----------|-----------|-----------|
 | POST | `/auth/register` | Cria um novo usuário | `{ "username": "usuario123", "password": "senha123" }` |
 | POST | `/auth/login` | Autentica o usuário e retorna token JWT | `{ "username": "usuario123", "password": "senha123" }` |
+| PUT | `/api/users/{id}/password` | Atualiza senha do próprio usuário |`{ "password": "novaSenha123" }` |
 
 ### Usuários
 
@@ -63,8 +64,6 @@ Metódos POST, PUT e PATCH requerem um body em formato JSON:
 | GET | `/api/users/me` | Retorna perfil do usuário autenticado. |
 | GET | `/api/users/all` | Lista todos os usuários (paginação). |
 | GET | `/api/users/{id}` | Retorna usuário por ID. |
-| PUT | `/api/users/{id}/password` | Atualiza senha do próprio usuário |
-`{ "password": "novaSenha123" }` |
 | DELETE | `/api/users/{id}` | Deleta o próprio usuário. |
 
 ### Check-ins
