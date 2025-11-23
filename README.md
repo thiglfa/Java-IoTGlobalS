@@ -49,8 +49,8 @@ INTEGRANTES:
 
 ### Autenticação
 
-| Método | Endpoint | Descrição |-
-|--------|----------|-----------|-
+| Método | Endpoint | Descrição |
+|--------|----------|-----------|
 | POST | `/auth/register` | Cria um novo usuário |
 | POST | `/auth/login` | Autentica o usuário e retorna token JWT |
 
